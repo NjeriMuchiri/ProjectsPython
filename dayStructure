@@ -6,16 +6,22 @@ class DaysThings:
             self.addedLists = addedLists
       def now(self):
           now = datetime.now()
-          better_format = now.strftime("%d/%m%Y %H:%M:%S")
+          better_format = now.strftime("%A/%d/%B/%Y %H:%M:%S")
           self.moment = better_format
     
       def addTask(self):
         while True:
           Do_the_thing = input("Tasks To Accomplish Today: ")
+          if Do_the_thing == '':
+              print("That's it for today!")
+              break
           self.addedLists = accomplishes.append(Do_the_thing)
-          print(f"A Task has been added: {self.addedLists}")
+          print(f"{self.addedLists}" )
+          
 
-didTheThing = DaysThings(moment = "now", addedLists= "Do_the_thing")
+didTheThing = DaysThings(moment = "now", addedLists= "addTask")
 didTheThing.now()
 print(didTheThing.moment)
 didTheThing.addTask()
+
+
