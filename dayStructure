@@ -13,7 +13,7 @@ class DaysThings:
         while True:
           Do_the_thing = input("Tasks To Accomplish Today: ")
           if Do_the_thing == '':
-              print("That's it for today!")
+              print(f"{self.moment} That's it for today!")
               break
           self.addedLists = accomplishes.append(Do_the_thing)
           print(f"{self.addedLists}" )
