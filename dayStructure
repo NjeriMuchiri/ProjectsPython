@@ -1,9 +1,9 @@
 from datetime import datetime 
-accomplishes = []
+# accomplishes = []
 class DaysThings:
-      def __init__(self,moment,addedLists):
+      def __init__(self,moment):
             self.moment = moment
-            self.addedLists = addedLists
+            self.addedLists = []
       def now(self):
           now = datetime.now()
           better_format = now.strftime("%A/%d/%B/%Y %H:%M:%S")
@@ -13,13 +13,13 @@ class DaysThings:
         while True:
           Do_the_thing = input("Tasks To Accomplish Today: ")
           if Do_the_thing == '':
-              print(f"{self.moment} That's it for today!")
+              print(f"{self.moment}: {self.addedLists} That's it for today!")
               break
-          self.addedLists = accomplishes.append(Do_the_thing)
+          self.addedLists.append(Do_the_thing)
           print(f"{self.addedLists}" )
           
 
-didTheThing = DaysThings(moment = "now", addedLists= "addTask")
+didTheThing = DaysThings(moment = "now")
 didTheThing.now()
 print(didTheThing.moment)
 didTheThing.addTask()
