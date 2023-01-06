@@ -1,0 +1,21 @@
+from datetime import datetime 
+accomplishes = []
+class DaysThings:
+      def __init__(self,moment,addedLists):
+            self.moment = moment
+            self.addedLists = addedLists
+      def now(self):
+          now = datetime.now()
+          better_format = now.strftime("%d/%m%Y %H:%M:%S")
+          self.moment = better_format
+    
+      def addTask(self):
+        while True:
+          Do_the_thing = input("Tasks To Accomplish Today: ")
+          self.addedLists = accomplishes.append(Do_the_thing)
+          print(f"A Task has been added: {self.addedLists}")
+
+didTheThing = DaysThings(moment = "now", addedLists= "Do_the_thing")
+didTheThing.now()
+print(didTheThing.moment)
+didTheThing.addTask()
