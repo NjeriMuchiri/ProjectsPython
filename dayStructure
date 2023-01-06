@@ -1,5 +1,5 @@
 from datetime import datetime 
-# accomplishes = []
+
 class DaysThings:
       def __init__(self,moment):
             self.moment = moment
