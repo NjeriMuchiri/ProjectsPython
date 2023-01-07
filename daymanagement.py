@@ -12,6 +12,7 @@ response = requests.get(quotes_api)
 # print(response.status_code)
 # print(response.json)
 quote = response.json()[0:]
+
 accomplishes = []
 today = datetime.now()
 whole_today = today.strftime("%A-%d-%m-%Y %H:%M:%S")
@@ -20,7 +21,7 @@ print(random.choice(quote))
 while True:
         Do_the_things = input("Things to accomplish: ")
         if Do_the_things == '':
-         print(f"{whole_today}: {', '.join(accomplishes)}", '\n' "That's it for today!")
+         print(f"{whole_today}: \n{', '.join(accomplishes)}", '\n' "That's it for today!")
          break
         accomplishes.append(Do_the_things)
         print(','.join(accomplishes))

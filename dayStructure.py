@@ -14,7 +14,7 @@ class DaysThings:
         while True:
           Do_the_thing = input("Tasks To Accomplish Today: ")
           if Do_the_thing == '':
-              print(f"{self.moment}: {', '.join(self.addedLists)}",'\n',"That's it for today!")
+              print(f"{self.moment}:  \n{', '.join(self.addedLists)}",'\n',"That's it for today!")
               break
           self.addedLists.append(Do_the_thing)
           print(f"{', '.join(self.addedLists)}" )
