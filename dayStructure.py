@@ -1,4 +1,6 @@
 from datetime import datetime 
+
+
 my_day = "My day's Things To Do: "
 print(my_day.center(70))
 class DaysThings:  

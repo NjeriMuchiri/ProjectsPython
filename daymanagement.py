@@ -1,8 +1,7 @@
 from datetime import datetime
 import requests
 import random
-import numpy as np
-
+import pprint
 
 my_day = "My day's Things To Do: "
 print(my_day.center(70))
@@ -12,6 +11,7 @@ response = requests.get(quotes_api)
 # print(response.status_code)
 # print(response.json)
 quote = response.json()[0:]
+
 
 accomplishes = []
 today = datetime.now()
