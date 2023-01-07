@@ -15,10 +15,10 @@ class DaysThings:
           Do_the_thing = input("Tasks To Accomplish Today: ")
           if Do_the_thing == '':
               self.addedLists ='\n'.join(self.addedLists)
-              print(f"{self.moment}:  \n{self.addedLists}",'\n',"That's it for today!")
+              print(f"{self.moment}:  \n{self.addedLists}",'\n' "That's it for today!")
               break
           self.addedLists.append(Do_the_thing)
-          print(f"{', '.join(self.addedLists)}" )
+          # print(f"{', '.join(self.addedLists)}" )
           
 
 didTheThing = DaysThings(moment = "now")

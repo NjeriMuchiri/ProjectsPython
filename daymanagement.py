@@ -21,10 +21,11 @@ print(random.choice(quote))
 while True:
         Do_the_things = input("Things to accomplish: ")
         if Do_the_things == '':
-         print(f"{whole_today}: \n{', '.join(accomplishes)}", '\n' "That's it for today!")
+         accomplish = '\n'.join(accomplishes)
+         print(f"{whole_today}: \n{accomplish}", '\n' "That's it for today!")
          break
-        accomplishes.append(Do_the_things)
-        print('\n'.join(accomplishes))
+        accomplish = accomplishes.append(Do_the_things)
+        # print('\n'.join(accomplishes))
 
     
 
