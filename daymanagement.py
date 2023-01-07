@@ -24,7 +24,7 @@ while True:
          print(f"{whole_today}: \n{', '.join(accomplishes)}", '\n' "That's it for today!")
          break
         accomplishes.append(Do_the_things)
-        print(','.join(accomplishes))
+        print('\n'.join(accomplishes))
 
     
 
