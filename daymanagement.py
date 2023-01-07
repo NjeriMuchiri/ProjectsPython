@@ -2,7 +2,7 @@ from datetime import datetime
 import requests
 import random
 import numpy as np
-import pprint
+
 
 my_day = "My day's Things To Do: "
 print(my_day.center(70))
@@ -16,14 +16,14 @@ accomplishes = []
 today = datetime.now()
 whole_today = today.strftime("%A-%d-%m-%Y %H:%M:%S")
 print(whole_today)
-pprint.pprint(random.choice(quote))
+print(random.choice(quote))
 while True:
         Do_the_things = input("Things to accomplish: ")
         if Do_the_things == '':
-         print(f"{whole_today}: {accomplishes} That's it for today!")
+         print(f"{whole_today}: {', '.join(accomplishes)} That's it for today!")
          break
         accomplishes.append(Do_the_things)
-        print(accomplishes)
+        print(','.join(accomplishes))
 
     
 
