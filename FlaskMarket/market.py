@@ -4,7 +4,4 @@ app = Flask(__name__)
 
 @app.route("/")
 def hello_world():
-    return "<h1>Hello, Kashee,Understand flask and django</h1>"
-@app.route('/about/<username>')
-def about_page(username):
-    return f'<h1>This is the about page of {username}</h1>'
+    return "<h1>Hello, Kashee</h1>"
