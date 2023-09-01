@@ -10,7 +10,7 @@ quotes_api = "https://type.fit/api/quotes"
 response = requests.get(quotes_api)
 # print(response.status_code)
 # print(response.json)
-quote = response.json()[0:]
+quote = response.json()[3:]
 
 
 accomplishes = []

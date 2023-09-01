@@ -1,8 +1,17 @@
-from datetime import datetime 
+#!/usr/bin/python
+"""This program just list my days to do
+plus a nice quote"""
+from datetime import datetime
+import requests
+import random
+import json
 
 
 my_day = "My day's Things To Do: "
 print(my_day.center(70))
+# quotes_api = "https://type.fit/api/quotes"
+# print(response.status_code)
+# print(response.json)
 class DaysThings:  
       def __init__(self,moment):
             self.moment = moment
@@ -21,12 +30,29 @@ class DaysThings:
               break
           self.addedLists.append(Do_the_thing)
           # print(f"{', '.join(self.addedLists)}" )
-          
+
+      def get_inspired(the_url):
+        the_url = "https://type.fit/api/quotes"
+        try:
+          res = requests.get(the_url)
+          if res.status_code == 200:
+            data = res.json()
+            if data:
+              first_quote = data[0]
+              the_quoteText = first_quote.get('text')
+              author = first_quote.get('author')
+
+              print(f"Quote: {the_quoteText}")
+              print(f"Author: {author}")
+            else:
+              print("No data found in the response")
+          else:
+            print(f"Request failed with status code: {res.status_code}")
+        except requests.exceptions.RequestException as err:
+          print(f"Request failed with error: {err}")
 
 didTheThing = DaysThings(moment = "now")
 didTheThing.now()
 print(didTheThing.moment)
 didTheThing.addTask()
-
-
-
+didTheThing.get_inspired()
