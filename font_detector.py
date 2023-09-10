@@ -2,7 +2,7 @@ import pytesseract
 from PIL import Image
 
 #This is the path to the Tesseract executables
-pytesseract.pytesseract.tesseract_cmd = r'usr/bin/tessercact'
+pytesseract.pytesseract.tesseract_cmd = "/usr/bin/tesseract"
 
 #load the image from the file
 image = Image.open('Images/receipt1.jpg')
